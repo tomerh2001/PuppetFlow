@@ -13,8 +13,8 @@ const web = supertest(webApp)                      // React App
 const server = supertest(serverApp)                // Express App
 const secondServer = supertest(secondServerApp)    // Express App
 
-web.theUrl('localhost:3034').means(server)
-web.theUrl('localhost:3030').means(secondServer)
+theUrl('localhost:3034').means(server)
+theUrl('localhost:3030').means(secondServer)
 
 web.get('/payment/cc').then(() => { 
     expect(server)
