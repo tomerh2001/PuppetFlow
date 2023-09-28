@@ -15,6 +15,9 @@ jobs:
 
     - name: Setup Bun
       uses: oven-sh/setup-bun@v1
+    
+    - name: Install Dependencies
+      runs: bun i --dev 
 
     - name: Semantic Release
       run: bunx semantic-release
