@@ -17,4 +17,4 @@ jobs:
       uses: oven-sh/setup-bun@v1
 
     - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@v4
+      run: bunx semantic-release
