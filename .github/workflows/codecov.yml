@@ -1,0 +1,16 @@
+name: "Codecov"
+
+on:
+  push:
+    branches:
+      - main # or master, or whichever branch you want this to run on
+
+jobs:
+  Codecov:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
